@@ -3,6 +3,15 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
+const hideerror = document.getElementById("modal")
+hideerror.className = "hidden"
+const like = document.querySelectorAll(".like-glyph")
+like.forEach(heart => {
+  heart.addEventListener('click', mimicServerCall)
+  
+
+
+})
 
 
 
@@ -23,3 +32,5 @@ function mimicServerCall(url="http://mimicServer.example.com", config={}) {
     }, 300);
   });
 }
+
+
